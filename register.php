@@ -78,7 +78,7 @@
               </div>
               <div class="form-group">
                 <label>Phone number:</label>
-                <input type="text" class="form-control" placeholder="Enter your phone number" autocomplete="off" name="phone">
+                <input type="number" class="form-control" placeholder="Enter your phone number" autocomplete="off" name="phone">
               </div>
               <div class="form-group">
                 <label>WIFI Mac Address:</label>
