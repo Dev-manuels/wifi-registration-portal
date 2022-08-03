@@ -39,7 +39,7 @@ include 'connection.php'?>
 
       <!-- php code to read from database and display-->
       <?php 
-        $sql= "SELECT * from `wifiRecord`";
+        $sql= "SELECT * from `studentRecord`";
         $result = mysqli_query($con,$sql);
         
         if($result){
