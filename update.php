@@ -4,7 +4,7 @@
   $id=$_GET['updateid'];
   $output="";
 
-  $sql="select * from `wifiRecord` where id=$id";
+  $sql="select * from `studentRecord` where id=$id";
   $result=mysqli_query($con,$sql);
   $row=mysqli_fetch_assoc($result);
   $matric=$row['matric'];
@@ -34,7 +34,7 @@
         $output .= "Mac address can not empty";
       } else {
 
-        $sql="update `wifiRecord` set id=$id,matric='$matric',surname='$surname',other='$other',phone='$phone',mac='$mac'  where id=$id";
+        $sql="update `studentRecord` set id=$id,matric='$matric',surname='$surname',other='$other',phone='$phone',mac='$mac'  where id=$id";
 
         $result=mysqli_query($con,$sql);
 
