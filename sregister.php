@@ -1,36 +1,36 @@
-<!-- <?php
+<?php
   include 'connection.php';
 
   $output="";
 
   if(isset($_POST['submit'])){
-    $matric=$_POST['matric'];
+    $staffID=$_POST['staffID'];
     $surname=$_POST['surname'];
     $other=$_POST['other'];
-    $phone=$_POST['phone'];
-    $mac=$_POST['mac'];
+    $username=$_POST['username'];
+    $password=$_POST['password'];
     $status="Pending";
 
-    $query = " SELECT * FROM wifiRecord WHERE matric = '$matric'";
+    $query = " SELECT * FROM staffRecord WHERE staffid = '$staffID'";
     $res = mysqli_query($con,$query);
 
 
 
-    if(empty($matric)){
-      $output .= "Matric number can not empty";
+    if(empty($staffID)){
+      $output .= "Staff ID can not empty";
     } else if(empty($surname)){
       $output .= "Surname can not empty";
     } else if(empty($other)){
       $output .= "Other name can not empty";
-    } else if(empty($phone)){
-      $output .= "Phone number can not empty";
-    }  else if(empty($mac)){
-      $output .= "Mac address can not empty";
+    } else if(empty($username)){
+      $output .= "Username can not empty";
+    }  else if(empty($password)){
+      $output .= "Desired password can not empty";
     } else if(mysqli_num_rows($res) == 1){
-      $output .= "Matric number has already been registred, Visit the office to update your details";
+      $output .= "Staff ID has already been registred, Visit the office to update your details";
     }
      else {
-      $sql="insert into `wifiRecord` (matric,surname,other,phone,mac,status) values('$matric','$surname','$other','$phone','$mac','$status')";
+      $sql="insert into `staffRecord` (staffid,surname,other,username,password,status) values('$StaffID','$surname','$other','$username','$password','$status')";
 
       $result=mysqli_query($con,$sql);
 
@@ -65,8 +65,8 @@
             <div class="text-center text-dark"><b><?php echo $output  ?></b></div>
             <form method="post">
               <div class="form-group">
-                <label>Matric No:</label>
-                <input type="text" class="form-control" placeholder="Enter your Matric number" autocomplete="off" name="matric">
+                <label>Staff ID:</label>
+                <input type="text" class="form-control" placeholder="Enter your Staff-ID" autocomplete="off" name="staffID">
               </div>
               <div class="form-group">
                 <label>Surname:</label>
@@ -77,12 +77,12 @@
                 <input type="text" class="form-control" placeholder="Enter your Other names" autocomplete="off" name="other">
               </div>
               <div class="form-group">
-                <label>Phone number:</label>
-                <input type="number" class="form-control" placeholder="Enter your phone number" autocomplete="off" name="phone">
+                <label>Username:</label>
+                <input type="text" class="form-control" placeholder="Enter username" autocomplete="off" name="username">
               </div>
               <div class="form-group">
-                <label>WIFI Mac Address:</label>
-                <input type="text" class="form-control" placeholder="Enter your WIFI Mac address" autocomplete="off" name="mac">
+                <label>Desired passowrd:</label>
+                <input type="password" class="form-control" placeholder="Enter your desired password" autocomplete="off" name="password">
               </div>
               <button type="submit" class="btn btn-success mt-1 mb-1" name="submit">Submit</button>
             </form>
@@ -101,4 +101,4 @@
     <!-- Latest compiled JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
   </body>
-</html> -->
+</html>
