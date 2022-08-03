@@ -11,7 +11,7 @@
     $mac=$_POST['mac'];
     $status="Pending";
 
-    $query = " SELECT * FROM wifiRecord WHERE matric = '$matric'";
+    $query = " SELECT * FROM studentRecord WHERE matric = '$matric'";
     $res = mysqli_query($con,$query);
 
 
@@ -30,7 +30,7 @@
       $output .= "Matric number has already been registred, Visit the office to update your details";
     }
      else {
-      $sql="insert into `wifiRecord` (matric,surname,other,phone,mac,status) values('$matric','$surname','$other','$phone','$mac','$status')";
+      $sql="insert into `studentRecord` (matric,surname,other,phone,mac,status) values('$matric','$surname','$other','$phone','$mac','$status')";
 
       $result=mysqli_query($con,$sql);
 
