@@ -8,3 +8,6 @@
 body {
   background-image: linear-gradient(90deg ,rgb(154, 228, 223) 0%, rgb(98, 233, 224) 100%);
 }
+li>a{
+  font-weight: bold;
+}
