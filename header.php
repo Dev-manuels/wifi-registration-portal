@@ -8,17 +8,17 @@
   <title></title>
 </head>
 <body>
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-<a class="navbar-brand" href="#"><img class="logo" src="https://federalpolyilaro.edu.ng/images/header-logo.png" alt="FPI logo" height="70px" width="180px"></a>
-    <div class="mr-auto"></div>
-      <ul class="navbar-nav">
-        <li class="nav-item">
-          <a href="login.php" class="nav-link text-dark">Login</a>
-        </li>
-        <li class="nav-item">
-          <a href="adminRegister.php" class="nav-link text-dark">Register-Admin</a>
-        </li>
-      </ul>
+  <nav class="">
+    <a class="" href="#"><img class="logo" src="https://federalpolyilaro.edu.ng/images/header-logo.png" alt="FPI logo" height="70px" width="180px"></a>
+      
+    <ul class="">
+      <li class="">
+        <a href="login.php" class="">Login</a>
+      </li>
+      <li class="">
+        <a href="adminRegister.php" class="">Register-Admin</a>
+      </li>
+    </ul>
    
     
   </nav>
