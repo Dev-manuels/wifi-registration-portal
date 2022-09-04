@@ -7,20 +7,15 @@
   <title></title>
 </head>
 <body>
-  <nav class="">
-    <a class="" href="#"><img class="logo" src="https://federalpolyilaro.edu.ng/images/header-logo.png" alt="FPI logo" height="70px" width="180px"></a>
-      
-    <ul class="">
-      <li class="">
-        <a href="login.php" class="">Login</a>
-      </li>
-      <li class="">
-        <a href="adminRegister.php" class="">Register-Admin</a>
-      </li>
-    </ul>
-   
-    
-  </nav>
+  <nav class="nav-bar login-bar">
+        <div class="logo-container">
+          <a href="https://federalpolyilaro.edu.ng"><img class="logo" src="https://federalpolyilaro.edu.ng/images/header-logo.png" alt="FPI logo" height="70px" width="180px"></a>
+        </div>
+        <ul class="main-nav login-links">
+            <li><a class="active" href="login.php">Login</a></li>
+            <li><a href="adminRegister.php">Register-Admin</a></li>
+        </ul> 
+    </nav>
   
 </body>
 </html>

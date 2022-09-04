@@ -1,3 +1,4 @@
+/* default seetings */
 *{
   margin: 0;
   padding: 0;
@@ -7,10 +8,59 @@
 }
 html{
   text-rendering: optimizeLegibility;
+  line-height: 1.8;
 }
-body {
-  background-image: linear-gradient(90deg ,rgb(154, 228, 223) 0%, rgb(98, 233, 224) 100%);
+h1,h2,h3,h4,h5,h6,a{
+  text-decoration: none;
+  margin: 0;
+  padding: 0;
 }
-li>a{
-  font-weight: bold;
+ol, ul, li{
+  margin: 0;
+  list-style: none;
+}
+
+/* INDEX PAGE STYLE */
+
+/* NAV BAR STYLES */
+nav{
+  display: flex;
+  justify-content: space-between;
+  height: 12vh;
+  position: fixed;
+  top: 0px;
+  width: 100%;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.76);
+}
+.logo-container{
+  margin-left: 15px;
+}
+
+.main-nav{
+  display: flex;
+  text-decoration: none;
+  justify-content: space-around;
+  margin-right: 5px;
+}
+
+.active{
+  padding-bottom: 1px;
+  border-bottom: 2px solid  black !important;
+}
+.main-nav > li >a{
+  margin-right: 1.3rem;
+  color: #034ea2;
+  font-size: .9rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  padding-bottom: 1px;
+  text-decoration: none;
+  border-bottom: 2px solid transparent;
+  transition: 0.25s;
+}
+.main-nav > li >a:hover{
+  margin-top: 10px;
+  border-bottom: 2px solid  rgb(238, 177, 54);
+  font-size: 1rem;
 }

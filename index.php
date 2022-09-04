@@ -46,37 +46,8 @@
     <title>LOGIN</title>
   </head>
   <body>
-    <?php include 'header.php'; ?>
-    <div class="Container mt-5">
-      <div class="col-md-12">
-        <div class="row d-flex justify-content-center">
-          <div class="col-md-6 shadow-sm">
-            <div class="container-fluid">
-              <h1 class= "text-center">WELCOME TO FPI HOTSPOT LOGIN PORTAL</h1>
-              <h2 class= "text-center">ADMIN LOGIN</h2>
-              <div class="text-center text-danger"><?php echo $output  ?></div>
-              <form method="post">
-                <div class="form-group">
-                  <label>Email address:</label>
-                  <input class="form-control" type="email" name="email" placeholder="Enter your Email">
-                </div>
-                <div class="form-group">
-                  <label>Password:</label>
-                  <input type="password" class="form-control" name="pass" placeholder="Enter your password">
-                </div>
-                <button name="Login" class="btn btn-success mb-2">Login</button>
-              </form>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+  <?php include 'header.php'; ?>
+    
 
-
-    <!-- jQuery library -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-
-    <!-- Latest compiled JavaScript -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
   </body>
 </html>
