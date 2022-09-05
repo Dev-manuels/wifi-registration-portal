@@ -27,11 +27,11 @@ nav{
   display: flex;
   justify-content: space-between;
   height: 12vh;
-  position: fixed;
-  top: 0px;
+  /* position: fixed;
+  top: 0px; */
   width: 100%;
   align-items: center;
-  background-color: rgba(255, 255, 255, 0.76);
+  background-color: transparent;
 }
 .logo-container{
   margin-left: 15px;
@@ -52,7 +52,7 @@ nav{
   margin-right: 1.3rem;
   color: #034ea2;
   font-size: .9rem;
-  font-weight: 600;
+  font-weight: bold;
   text-transform: uppercase;
   padding-bottom: 1px;
   text-decoration: none;
@@ -63,4 +63,164 @@ nav{
   margin-top: 10px;
   border-bottom: 2px solid  rgb(238, 177, 54);
   font-size: 1rem;
+}
+
+
+
+/* hero section styling */
+.hero-content{
+  margin: 60px 5%;
+}
+.hero-main{
+  padding-top: 40px;
+}
+.hero-text{
+  font-size: 2rem;
+  color: white;
+}
+.hero-text-main{
+  font-size: 2rem;
+  color: #034ea2;
+}
+.hero-text-details>p,.hero-text-details > a{
+  color:white;
+  font-size: 1rem;
+}
+/* 
+footer{
+  height: 100%;
+  background-color: #034ea2;
+  color: #fff;
+  padding-bottom: 50px;
+}
+.footer-main{
+  width: 100%;
+  height: 100%;
+  padding: 5% 8%;
+  padding-top: 40px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+.footer-main-text>h2{
+  font-size: 1.2rem;
+}
+.footer-main-text{
+  width: 30.6%;
+  height: 100%;
+}
+.footer-final{
+  text-align: center;
+}
+.footer-final > a{
+  color: white;
+  padding: 15px 25px;
+  border-radius: 30px;
+  background-color: rgb(238, 177, 54);
+} */
+
+
+/* LOGIN PAGE STYLE */
+
+/* nav bar */
+/* .login-bar{
+  background-color: rgba(238, 177, 54,0.76);
+}
+.login-links > li >a:hover{
+  margin-top: 10px;
+  border-bottom: 2px solid  #fff;
+  font-size: 1rem;
+} */
+/* main */
+.main{
+  display: flex;
+  justify-content: center;
+  height: 88vh;
+  background-image:
+  linear-gradient(21deg, rgba(138,215,91,0.7) 0%, rgba(90,204,23,0.7) 50%, rgba(197,238,37,0.7) 100%),
+  url("https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80");
+  background-color: #fff;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+}
+.login-main-text{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.register-main{
+  height: fit-content;
+  padding-bottom: 60px;
+}
+.form-container{
+  margin-top: 25px;
+}
+.form-input, .form-submit{
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+}
+.form-row{
+  display: flex;
+  flex-direction: row;
+  /* gap: 40px; */
+  justify-content: space-between;
+}
+.form-input > label{
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+.form-input > input,select{
+  min-width: 100%;
+  font-weight: bold;
+  color: #034ea2;
+  padding-left: 10px;
+  height: 40px;
+  border-color: transparent;
+  border-radius: 5px;
+}
+.form-input > .large{
+  width: calc(100vw - 70vw);
+}
+.form-submit > input[type=submit]{
+  font-weight: bold;
+  background-color: rgb(238, 177, 54);
+  border-radius: 20px;
+  color: #fff;
+  align-self: center;
+  width: 100px;
+  height: 40px;
+  cursor: pointer;
+}
+.form-submit > input[type=submit]:hover{
+  color: #034ea2;
+}
+
+
+
+
+
+
+
+
+
+@media only screen and (max-width: 500px) {
+  nav{
+      flex-direction: column;
+      padding-bottom: 2vh;
+  }
+  .login-main{
+      margin-top: 14vh;
+      height: 86vh;
+  }
+  form{
+      width: 80%;
+  }
+  .form-row{
+      flex-direction: column;
+  }
 }

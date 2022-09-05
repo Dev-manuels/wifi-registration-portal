@@ -12,10 +12,10 @@
           <a href="https://federalpolyilaro.edu.ng"><img class="logo" src="https://federalpolyilaro.edu.ng/images/header-logo.png" alt="FPI logo" height="70px" width="180px"></a>
         </div>
         <ul class="main-nav login-links">
-            <li><a class="active" href="login.php">Login</a></li>
+            <li><a class="active" href="index.php">Login</a></li>
             <li><a href="adminRegister.php">Register-Admin</a></li>
         </ul> 
     </nav>
-  
+
 </body>
 </html>

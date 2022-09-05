@@ -47,7 +47,32 @@
   </head>
   <body>
   <?php include 'header.php'; ?>
-    
+  <main class="main">
+  
+        <form method="post" class="form-container">
+            <div class="login-main-text">
+                <h2 class="hero-text-main">Welcome to FPI Hotspot</h2>
+                <h2 class="hero-text">Login Portal</h2>
+            </div>
+            <div style="color: red;, font-size: 2rem;"><b><?php echo $output  ?></b></div>
+            <div class="form-input-container">
+                <div class="form-input">
+                    <label for="Email">Email:</label>
+                    <input type="email" name="email" placeholder="Enter your Email">
+                </div>
+
+                <input type="text" name="username" style="display: none;">
+                <div class="form-input">
+                    <label for="Password">Password:</label>
+                    <input type="password" name="pass" placeholder="Enter your password">
+                </div>
+                <div class="form-submit">
+                    <input type="submit" name="Login" value="Login">
+                </div>
+            </div>
+        </form>
+
+    </main>
 
   </body>
 </html>
