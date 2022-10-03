@@ -56,13 +56,10 @@
   </head>
   <body>
   <?php include 'sheader.php'; ?>
-    <div class="Container mt-5 mx-3">
-      <div class="col-md-12">
-        <div class="row d-flex justify-content-center">
-          <div class="col-md-6 shadow-sm">
-            <h1 class= "text-center">Welcome to FPI hotspot registration portal</h1>
-            <h2 class= "text-center">REGISTER</h2>
-            <div class="text-center text-dark"><b><?php echo $output  ?></b></div>
+  
+            <h1>Welcome to FPI hotspot registration portal</h1>
+            <h2>REGISTER</h2>
+            <div><b><?php echo $output  ?></b></div>
             <form method="post">
               <div class="form-group">
                 <label>Matric No:</label>
@@ -86,11 +83,6 @@
               </div>
               <button type="submit" class="btn btn-success mt-1 mb-1" name="submit">Submit</button>
             </form>
-          </div>
-      
-        </div>
-      </div> 
-    </div>
 
 
 

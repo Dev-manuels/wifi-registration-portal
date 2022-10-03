@@ -13,13 +13,13 @@ include 'connection.php'?>
   <body>
      <?php include 'lheader.php'; ?>
     <div class="container mt-5">
-    <a class="text-dark" style="text-decoration:none;" href="aregister.php"><button class="btn btn-dark mb-2 text-light">Register Student</button></a>
+    <a class="text-dark" style="text-decoration:none;" href="register.php"><button class="btn btn-dark mb-2 text-light">Register Student</button></a>
     <h1 class= "text-center">Welcome to FPI hotspot records</h1>
       
-    <div class="container-fluid">
-    
-    <table class="table table-hover" border="1px">
-    <thead class="thead-dark">
+    <main>
+    <div class="table-container">
+    <table class="" border="1px">
+    <thead class="">
       <tr>
         <!-- <th scope="col">#</th> -->
         <th scope="col">MATRIC NO</th>
@@ -56,29 +56,24 @@ include 'connection.php'?>
             //<th scope="row">'.$id.'</th>
             echo ' <tr>
             
-            <td class="text-dark"><b>'.$matric.'</b></td>
-            <td class="text-dark"><b>'.$surname.'</b></td>
-            <td class="text-dark"><b>'.$other.'</b></td>
-            <td class="text-dark"><b>'.$phone.'</b></td>
-            <td class="text-dark"><b>'.$mac.'</b></td>
-            <td class="text-dark"><b>'.$status.'</b></td>
-            <td class="text-dark"><b>'.$date.'</b></td>
+            <td><b>'.$matric.'</b></td>
+            <td><b>'.$surname.'</b></td>
+            <td><b>'.$other.'</b></td>
+            <td><b>'.$phone.'</b></td>
+            <td><b>'.$mac.'</b></td>
+            <td><b>'.$status.'</b></td>
+            <td><b>'.$date.'</b></td>
             <td>
-            <a href="update.php?updateid='.$id.'"" class="text-light"><button class="btn btn-primary">UPDATE</button></a>
-            <a href="delete.php?deleteid='.$id.'" class="text-white"><button class="btn btn-danger" >DELETE</button></a>
-            <a href="done.php?doneid='.$id.'" class="text-white"><button class="btn btn-success" >DONE</button></a>
+            <a href="update.php?updateid='.$id.'"" ><button>UPDATE</button></a>
+            <a href="delete.php?deleteid='.$id.'" ><button>DELETE</button></a>
+            <a href="done.php?doneid='.$id.'" ><button>DONE</button></a>
             </td>
           </tr>' ;   
           }
         }
       ?>
-      
-
-
-    </tbody>
-  </table>
     </div>
-    </div>
+    </main>
     
 
     <!-- jQuery library -->
