@@ -55,50 +55,43 @@
     <title>REGISTER</title>
   </head>
   <body>
-  <?php include 'sheader.php'; ?>
-    <div class="Container mt-5 mx-3">
-      <div class="col-md-12">
-        <div class="row d-flex justify-content-center">
-          <div class="col-md-6 shadow-sm">
-            <h1 class= "text-center">Welcome to FPI hotspot registration portal</h1>
-            <h2 class= "text-center">REGISTER</h2>
-            <div class="text-center text-dark"><b><?php echo $output  ?></b></div>
-            <form method="post">
-              <div class="form-group">
-                <label>Staff ID:</label>
-                <input type="text" class="form-control" placeholder="Enter your Staff-ID" autocomplete="off" name="staffID">
-              </div>
-              <div class="form-group">
-                <label>Surname:</label>
-                <input type="text" class="form-control" placeholder="Enter your Surname" autocomplete="off" name="surname">
-              </div>
-              <div class="form-group">
-                <label>Other names:</label>
-                <input type="text" class="form-control" placeholder="Enter your Other names" autocomplete="off" name="other">
-              </div>
-              <div class="form-group">
-                <label>Username:</label>
-                <input type="text" class="form-control" placeholder="Enter username" autocomplete="off" name="username">
-              </div>
-              <div class="form-group">
-                <label>Desired passowrd:</label>
-                <input type="password" class="form-control" placeholder="Enter your desired password" autocomplete="off" name="password">
-              </div>
-              <button type="submit" class="btn btn-success mt-1 mb-1" name="submit">Submit</button>
-            </form>
-          </div>
-      
+    <?php include 'header.php'; ?>
+    <main class="main-register">
+      <form method="post" class="form-container">
+        <div class="login-main-text">
+          <h2 class="hero-text-main">Welcome to FPI hotspot registration portal</h2>
+          <h2 class="hero-text">Staff Registration</h2>
         </div>
-      </div> 
-    </div>
+        <div class="form-input-container">
+          <div class="form-input">
+            <label>Staff ID:</label>
+            <input type="text" class="form-control" placeholder="Enter your Staff-ID" autocomplete="off" name="staffID" required>
+          </div>
+          <div class="form-input">
+            <label>Surname:</label>
+            <input type="text" class="form-control" placeholder="Enter your Surname" autocomplete="off" name="surname" required>
+          </div>
+          <div class="form-input">
+            <label>Other names:</label>
+            <input type="text" class="form-control" placeholder="Enter your Other names" autocomplete="off" name="other" required>
+          </div>
+          <div class="form-input">
+            <label>Username:</label>
+            <input type="text" class="form-control" placeholder="Enter username" autocomplete="off" name="username" required>
+          </div>
+          <div class="form-input">
+            <label>Desired passowrd:</label>
+            <input type="password" class="form-control" placeholder="Enter your desired password" autocomplete="off" name="password" required>
+          </div>
+          <div class="form-submit">
+            <input type="submit" value="Register" name="submit">
+          </div>
+        </div>
+      </form>
+
+    </main>
 
 
-
-
-    <!-- jQuery library -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-
-    <!-- Latest compiled JavaScript -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <?php include 'scripts.php'; ?>
   </body>
 </html>

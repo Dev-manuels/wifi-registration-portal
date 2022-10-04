@@ -8,78 +8,84 @@ include 'connection.php'?>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <?php include 'links.php';?>
     <title>DASHBOARD</title>
   </head>
   <body>
-     <?php include 'header.php'; ?>
-    <div class="container mt-5">
-    <a href="register.php"><button>Register Student</button></a>
-    <h1>Welcome to FPI hotspot records</h1>
-      
+    <nav class="dashboard-nav">
+      <div class="logo-container">
+        <a href="https://federalpolyilaro.edu.ng"><img class="logo" src="img/logo.png" alt="FPI logo" height="71px" width="180px"></a>
+      </div>
+      <ul class="main-nav login-links">
+          <li><a class="active white-text" href="index.php">Login</a></li>
+          <li><a class="white-text" href="register.php">Register</a></li>
+      </ul> 
+    </nav>
     <main>
-    <div class="table-container">
-    <table class="" border="1px">
-    <thead class="">
-      <tr>
-        <!-- <th scope="col">#</th> -->
-        <th scope="col">MATRIC NO</th>
-        <th scope="col">SURNAME</th>
-        <th scope="col">OTHER NAMES</th>
-        <th scope="col">PHONE NO</th>
-        <th scope="col">MAC ADDRESS</th>
-        <th scope="col">REGISTATION-STATUS</th>
-        <th scope="col">ENTRY-DATE</th>
-        <th scope="col">OPERATIONS</th>
-      </tr>
-    </thead>
-    <tbody>
+      <a href="register.php"><button>Register Student</button></a>
+      <a href="sregister.php"><button>Register Staff</button></a>
+   
+      <div class="main-text">
+        <h2 class="hero-main">Welcome to FPI hotspot records</h2>
+      </div>
+      <div class="table-container">
+      <table class="table" border="1px">
+      <thead class="">
+        <tr>
+          <!-- <th scope="col">#</th> -->
+          <th scope="col">MATRIC NO</th>
+          <th scope="col">SURNAME</th>
+          <th scope="col">OTHER NAMES</th>
+          <th scope="col">PHONE NO</th>
+          <th scope="col">MAC ADDRESS</th>
+          <th scope="col">REGISTATION-STATUS</th>
+          <th scope="col">ENTRY-DATE</th>
+          <th scope="col">OPERATIONS</th>
+        </tr>
+      </thead>
+      <tbody>
 
 
 
 
-      <!-- php code to read from database and display-->
-      <?php 
-        $sql= "SELECT * from `studentRecord`";
-        $result = mysqli_query($con,$sql);
-        
-        if($result){
-          while ($row=mysqli_fetch_assoc($result)) {
-            $id=$row['id'];
-            $matric=$row['matric'];
-            $surname=$row['surname'];
-            $other=$row['other'];
-            $phone=$row['phone'];
-            $mac=$row['mac'];
-            $status=$row['status'];
-            $date=$row['date'];
-            
-            //<th scope="row">'.$id.'</th>
-            echo ' <tr>
-            
-            <td><b>'.$matric.'</b></td>
-            <td><b>'.$surname.'</b></td>
-            <td><b>'.$other.'</b></td>
-            <td><b>'.$phone.'</b></td>
-            <td><b>'.$mac.'</b></td>
-            <td><b>'.$status.'</b></td>
-            <td><b>'.$date.'</b></td>
-            <td>
-            <a href="update.php?updateid='.$id.'"" ><button>UPDATE</button></a>
-            <a href="delete.php?deleteid='.$id.'" ><button>DELETE</button></a>
-            <a href="done.php?doneid='.$id.'" ><button>DONE</button></a>
-            </td>
-          </tr>' ;   
+        <!-- php code to read from database and display-->
+        <?php 
+          $sql= "SELECT * from `studentRecord`";
+          $result = mysqli_query($con,$sql);
+          
+          if($result){
+            while ($row=mysqli_fetch_assoc($result)) {
+              $id=$row['id'];
+              $matric=$row['matric'];
+              $surname=$row['surname'];
+              $other=$row['other'];
+              $phone=$row['phone'];
+              $mac=$row['mac'];
+              $status=$row['status'];
+              $date=$row['date'];
+              
+              //<th scope="row">'.$id.'</th>
+              echo ' <tr>
+              
+              <td><b>'.$matric.'</b></td>
+              <td><b>'.$surname.'</b></td>
+              <td><b>'.$other.'</b></td>
+              <td><b>'.$phone.'</b></td>
+              <td><b>'.$mac.'</b></td>
+              <td><b>'.$status.'</b></td>
+              <td><b>'.$date.'</b></td>
+              <td>
+              <a href="update.php?updateid='.$id.'"" ><button>UPDATE</button></a>
+              <a href="delete.php?deleteid='.$id.'" ><button>DELETE</button></a>
+              <a href="done.php?doneid='.$id.'" ><button>DONE</button></a>
+              </td>
+            </tr>' ;   
+            }
           }
-        }
-      ?>
-    </div>
+        ?>
+      </div>
     </main>
     
-
-    <!-- jQuery library -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-
-    <!-- Latest compiled JavaScript -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <?php include 'scripts.php'; ?>
   </body>
 </html>

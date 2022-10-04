@@ -7,27 +7,16 @@
   <title>Successful</title>
 </head>
 <body>
-<?php include 'header.php';?>
-<div class="Container mt-5 mx-3">
-        <div class="col-md-12">
-          <div class="row d-flex justify-content-center">
-            <div class="col-md-4 shadow-sm">
-              <div class="container-fluid">
-                <img class="img-fluid" src="img/Success.png">
-                <h1 class="text-center"><b>DO NOT RE-REGISTER AGAIN<b></h1>
-                <h1 class="text-center">You will be registered soon</h1>
-                <p class="text-center">NOTE: When logging in<br>Username = Matric No <br>password = Other Name</p>
-                
-              </div>
-            </div>
-          </div>
-      </div>
-    </div>
+  <?php include 'header.php';?>
+  <main>
+  
+    <img class="" src="img/Success.png">
+    <h1 class=""><b>DO NOT RE-REGISTER AGAIN<b></h1>
+    <h1 class="">You will be registered soon</h1>
+    <p class="">NOTE: When logging in<br>Username = Matric No <br>password = Other Name</p>
+    
+  </main>
 
-    <!-- jQuery library -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-
-    <!-- Latest compiled JavaScript -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <?php include 'scripts.php'; ?>
 </body>
 </html>

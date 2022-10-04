@@ -3,7 +3,7 @@
 
   $output="";
 
-  if(isset($_POST['submit'])){
+  if(isset($_POST['register'])){
     $matric=$_POST['matric'];
     $surname=$_POST['surname'];
     $other=$_POST['other'];
@@ -56,7 +56,7 @@
   </head>
   <body>
     <?php include 'header.php'; ?>
-    <main class="main register-main">
+    <main class="main-register">
   
       <form method="post" class="form-container">
       <div class="login-main-text">
@@ -64,38 +64,34 @@
           <h2 class="hero-text">Student Registration</h2>
       </div>
       <div class="form-input-container">
-        <div style="color: red;, font-size: 2rem;"><b><?php echo $output  ?></b></div>
+        <div class="error"><b><?php echo $output  ?></b></div>
         <div class="form-input">
           <label>Matric No:</label>
-          <input type="text" placeholder="Enter your Matric number" autocomplete="off" name="matric">
+          <input type="text" placeholder="Enter your Matric number" autocomplete="off" name="matric" required>
         </div>
         <div class="form-input">
           <label>Surname:</label>
-          <input type="text" placeholder="Enter your Surname" autocomplete="off" name="surname">
+          <input type="text" placeholder="Enter your Surname" autocomplete="off" name="surname" required>
         </div>
         <div class="form-input">
           <label>Other names:</label>
-          <input type="text" placeholder="Enter your Other names" autocomplete="off" name="other">
+          <input type="text" placeholder="Enter your Other names" autocomplete="off" name="other" required>
         </div>
         <div class="form-input">
           <label>Phone number:</label>
-          <input type="number" placeholder="Enter your phone number" autocomplete="off" name="phone">
+          <input type="number" placeholder="Enter your phone number" autocomplete="off" name="phone" required>
         </div>
         <div class="form-input">
           <label>WIFI Mac Address:</label>
-          <input type="text" placeholder="Enter your WIFI Mac address" autocomplete="off" name="mac">
+          <input type="text" placeholder="Enter your WIFI Mac address" autocomplete="off" name="mac" required>
         </div>
         <div class="form-submit">
-          <input type="submit" value="Register">
+          <input type="submit" value="Register" name="register">
         </div>
       </div>
       </form>
     </main>
 
-    <!-- jQuery library -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-
-    <!-- Latest compiled JavaScript -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <?php include 'scripts.php'; ?>
   </body>
 </html>

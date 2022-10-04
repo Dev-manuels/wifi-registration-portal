@@ -48,7 +48,7 @@
   </head>
   <body>
   <?php include 'header.php'; ?>
-  <main class="main">
+  <main class="main-login">
   
         <form method="post" class="form-container">
             <div class="login-main-text">
@@ -74,6 +74,6 @@
         </form>
 
     </main>
-
+    <?php include 'scripts.php'; ?>
   </body>
 </html>
