@@ -7,7 +7,7 @@
   <title>Successful</title>
 </head>
 <body>
-<?php include 'sheader.php';?>
+<?php include 'header.php';?>
 <div class="Container mt-5 mx-3">
         <div class="col-md-12">
           <div class="row d-flex justify-content-center">

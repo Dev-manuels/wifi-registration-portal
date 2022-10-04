@@ -67,7 +67,6 @@ nav{
   font-size: 1rem;
 }
 
-!important
 
 /* hero section styling */
 .hero-content{
@@ -85,7 +84,7 @@ nav{
   color: #fff;
 }
 .hero-text-details>p,.hero-text-details > a{
-  color:white;
+  color:#fff;
   font-size: 1rem;
 }
 /* main */
@@ -103,59 +102,60 @@ nav{
 
 }
 .login-main-text{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 .register-main{
-    height: fit-content;
-    padding-bottom: 60px;
+  height: fit-content;
+  padding-bottom: 60px;
 }
 .form-container{
-    margin-top: 25px;
+  margin-top: 40px;
 }
 .form-input, .form-submit{
-    margin-top: 10px;
-    display: flex;
-    flex-direction: column;
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
 }
 .form-row{
-    display: flex;
-    flex-direction: row;
-    /* gap: 40px; */
-    justify-content: space-between;
+  display: flex;
+  flex-direction: row;
+  /* gap: 40px; */
+  justify-content: space-between;
 }
 .form-input > label{
-    color: #fff;
-    font-size: 1.2rem;
-    font-weight: bold;
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: bold;
 }
 .form-input > input,select{
-    min-width: 100%;
-    font-weight: bold;
-    color: #fff;
-    padding-left: 10px;
-    height: 40px;
-    border-color: transparent;
-    border-radius: 5px;
-}
-.form-input > .large{
+  min-width: 100%;
+  font-weight: bold;
+  color: #fff;.form-input > .large{
     width: calc(100vw - 70vw);
+  }
+  padding-left: 10px;
+  height: 40px;
+  border-color: transparent;
+  border-radius: 5px;
 }
 .form-submit > input[type=submit]{
-    font-weight: bold;
-    border-radius: 20px;
-    background-color: transparent;
-    color: white;
-    align-self: center;
-    width: 100px;
-    height: 40px;
-    cursor: pointer;
+  margin-top: 10px;
+  font-weight: bold;
+  border-radius: 20px;
+  background-color: transparent;
+  color: rgb(148,251,122);
+  align-self: center;
+  width: 100px;
+  height: 40px;
+  cursor: pointer;
+  transition: 0.3s;
 }
 .form-submit > input[type=submit]:hover{
-  background-color: black ;
-  color: rgb(148,251,122);
+  background-color: #fff;
+  color: black;
 }
 
 
@@ -167,18 +167,18 @@ nav{
 
 
 @media only screen and (max-width: 500px) {
-    nav{
-        flex-direction: column;
-        padding-bottom: 2vh;
-    }
-    .login-main{
-        margin-top: 14vh;
-        height: 86vh;
-    }
-    form{
-        width: 80%;
-    }
-    .form-row{
-        flex-direction: column;
-    }
+  nav{
+      flex-direction: column;
+      padding-bottom: 2vh;
   }
+  .login-main{
+      margin-top: 14vh;
+      height: 86vh;
+  }
+  form{
+      width: 80%;
+  }
+  .form-row{
+      flex-direction: column;
+  }
+}

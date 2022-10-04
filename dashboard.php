@@ -11,10 +11,10 @@ include 'connection.php'?>
     <title>DASHBOARD</title>
   </head>
   <body>
-     <?php include 'lheader.php'; ?>
+     <?php include 'header.php'; ?>
     <div class="container mt-5">
-    <a class="text-dark" style="text-decoration:none;" href="register.php"><button class="btn btn-dark mb-2 text-light">Register Student</button></a>
-    <h1 class= "text-center">Welcome to FPI hotspot records</h1>
+    <a href="register.php"><button>Register Student</button></a>
+    <h1>Welcome to FPI hotspot records</h1>
       
     <main>
     <div class="table-container">

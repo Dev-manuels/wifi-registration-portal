@@ -55,37 +55,42 @@
     <title>REGISTER</title>
   </head>
   <body>
-  <?php include 'sheader.php'; ?>
+    <?php include 'header.php'; ?>
+    <main class="main register-main">
   
-            <h1>Welcome to FPI hotspot registration portal</h1>
-            <h2>REGISTER</h2>
-            <div><b><?php echo $output  ?></b></div>
-            <form method="post">
-              <div class="form-group">
-                <label>Matric No:</label>
-                <input type="text" class="form-control" placeholder="Enter your Matric number" autocomplete="off" name="matric">
-              </div>
-              <div class="form-group">
-                <label>Surname:</label>
-                <input type="text" class="form-control" placeholder="Enter your Surname" autocomplete="off" name="surname">
-              </div>
-              <div class="form-group">
-                <label>Other names:</label>
-                <input type="text" class="form-control" placeholder="Enter your Other names" autocomplete="off" name="other">
-              </div>
-              <div class="form-group">
-                <label>Phone number:</label>
-                <input type="number" class="form-control" placeholder="Enter your phone number" autocomplete="off" name="phone">
-              </div>
-              <div class="form-group">
-                <label>WIFI Mac Address:</label>
-                <input type="text" class="form-control" placeholder="Enter your WIFI Mac address" autocomplete="off" name="mac">
-              </div>
-              <button type="submit" class="btn btn-success mt-1 mb-1" name="submit">Submit</button>
-            </form>
-
-
-
+      <form method="post" class="form-container">
+      <div class="login-main-text">
+          <h2 class="hero-text-main">Welcome to FPI hotspot registration portal</h2>
+          <h2 class="hero-text">Student Registration</h2>
+      </div>
+      <div class="form-input-container">
+        <div style="color: red;, font-size: 2rem;"><b><?php echo $output  ?></b></div>
+        <div class="form-input">
+          <label>Matric No:</label>
+          <input type="text" placeholder="Enter your Matric number" autocomplete="off" name="matric">
+        </div>
+        <div class="form-input">
+          <label>Surname:</label>
+          <input type="text" placeholder="Enter your Surname" autocomplete="off" name="surname">
+        </div>
+        <div class="form-input">
+          <label>Other names:</label>
+          <input type="text" placeholder="Enter your Other names" autocomplete="off" name="other">
+        </div>
+        <div class="form-input">
+          <label>Phone number:</label>
+          <input type="number" placeholder="Enter your phone number" autocomplete="off" name="phone">
+        </div>
+        <div class="form-input">
+          <label>WIFI Mac Address:</label>
+          <input type="text" placeholder="Enter your WIFI Mac address" autocomplete="off" name="mac">
+        </div>
+        <div class="form-submit">
+          <input type="submit" value="Register">
+        </div>
+      </div>
+      </form>
+    </main>
 
     <!-- jQuery library -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
