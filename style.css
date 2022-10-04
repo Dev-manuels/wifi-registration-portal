@@ -112,7 +112,7 @@ nav{
   padding-bottom: 60px;
 }
 .form-container{
-  margin-top: 40px;
+  margin-top: 25px;
 }
 .form-input, .form-submit{
   margin-top: 10px;
@@ -133,13 +133,14 @@ nav{
 .form-input > input,select{
   min-width: 100%;
   font-weight: bold;
-  color: #fff;.form-input > .large{
-    width: calc(100vw - 70vw);
-  }
+  color: #fff;
   padding-left: 10px;
   height: 40px;
   border-color: transparent;
   border-radius: 5px;
+}
+.form-input > .large{
+  width: calc(100vw - 70vw);
 }
 .form-submit > input[type=submit]{
   margin-top: 10px;
@@ -154,7 +155,7 @@ nav{
   transition: 0.3s;
 }
 .form-submit > input[type=submit]:hover{
-  background-color: #fff;
+  background-color: #fff ;
   color: black;
 }
 
