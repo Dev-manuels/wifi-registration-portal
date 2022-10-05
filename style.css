@@ -201,7 +201,11 @@ nav{
   width:100%;
 }
 
-
+.success-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
 
 
 
