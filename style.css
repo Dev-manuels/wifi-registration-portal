@@ -127,7 +127,7 @@ nav{
 }
 .main-dashboard{
   background-image:
-  linear-gradient(21deg, rgba(4,9,30,0.7) 0%, rgba(4,9,30,0.7) 50%, rgba(4,9,30,0.7) 100%),
+  linear-gradient(21deg, rgba(4,9,30,0.8) 0%, rgba(4,9,30,0.8) 50%, rgba(4,9,30,0.8) 100%),
   url("https://images.unsplash.com/photo-1609334761848-77b4d1994040?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80");
   background-repeat: no-repeat;
   background-position: center;
@@ -215,7 +215,7 @@ nav{
 /* logout button */
 .logout{
   color: black;
-  background-color: transparent;
+  background-color: #fff;
   font-weight: bold;
   padding: 5px;
   border-radius: 20px;
@@ -234,10 +234,7 @@ nav{
   margin-left:auto; 
   margin-right:auto; 
   width:100%;
-  margin-bottom: 50px;
-}
-.hack{
-  height: 10px;
+  margin-bottom: 20px;
 }
 /* Buttons */
 .btn-container,.buttons-container{
@@ -254,14 +251,14 @@ nav{
   color: #fff;
 }
 .btn-update{
-  background-color: rgb(134, 224, 111);
+  background-color: #00D100;
 }
 .btn-delete,.logout:hover{
-  background-color: rgb(247, 17, 17);
+  background-color: #FF2E2E;
+  color: #fff;
 }
 .btn-done{
   color: black;
-  background-color: #fff;
 }
 .btn-update:hover,.btn-delete:hover,.btn-done:hover{
   background-color: transparent;
@@ -270,6 +267,9 @@ nav{
 
 
 
+.hack{
+  padding: 25px 0px 0px 0px;
+}
 
 @media only screen and (max-width: 500px) {
   nav{

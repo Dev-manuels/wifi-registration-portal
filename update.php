@@ -73,23 +73,23 @@
         <div class="error"><b><?php echo $output  ?></b></div>
         <div class="form-input">
           <label>Matric No:</label>
-          <input type="text" placeholder="Enter your Matric number" autocomplete="off" name="matric" value=<?php echo $matric;?> readonly>
+          <input type="text" placeholder="Enter your Matric number" autocomplete="off" name="matric" value="<?php echo $matric;?>" readonly>
         </div>
         <div class="form-input">
           <label>Surname:</label>
-          <input type="text" placeholder="Enter your Surname" autocomplete="off" name="surname" value=<?php echo $surname;?> required>
+          <input type="text" placeholder="Enter your Surname" autocomplete="off" name="surname" value="<?php echo $surname;?>" required>
         </div>
         <div class="form-input">
           <label>Other names:</label>
-          <input type="text" placeholder="Enter your Other names" autocomplete="off" name="other" value=<?php echo $other;?> required>
+          <input type="text" placeholder="Enter your Other names" autocomplete="off" name="other" value="<?php echo $other;?>" required>
         </div>
         <div class="form-input">
           <label>Phone number:</label>
-          <input type="tel" placeholder="Enter your phone number" autocomplete="off" name="phone" value=<?php echo $phone;?> required>
+          <input type="tel" placeholder="Enter your phone number" autocomplete="off" name="phone" value="<?php echo $phone;?>" required>
         </div>
         <div class="form-input">
           <label>WIFI Mac Address:</label>
-          <input type="text" placeholder="Enter your WIFI Mac address" autocomplete="off" name="mac" value=<?php echo $mac;?> required>
+          <input type="text" placeholder="Enter your WIFI Mac address" autocomplete="off" name="mac" value="<?php echo $mac;?>" required>
         </div>
         <div class="form-submit">
           <input type="submit" value="Update" name="submit">

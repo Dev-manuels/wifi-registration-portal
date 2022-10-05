@@ -4,19 +4,19 @@
   $output="";
 
   if(isset($_POST['submit'])){
-    $staffID=$_POST['staffID'];
+    $staffid=$_POST['staffid'];
     $surname=$_POST['surname'];
     $other=$_POST['other'];
     $username=$_POST['username'];
     $password=$_POST['password'];
     $status="Pending";
 
-    $query = " SELECT * FROM staffRecord WHERE staffid = '$staffID'";
+    $query = " SELECT * FROM staffRecord WHERE staffid = '$staffid'";
     $res = mysqli_query($con,$query);
 
 
 
-    if(empty($staffID)){
+    if(empty($staffid)){
       $output .= "Staff ID can not empty";
     } else if(empty($surname)){
       $output .= "Surname can not empty";
@@ -30,7 +30,7 @@
       $output .= "Staff ID has already been registred, Visit the office to update your details";
     }
      else {
-      $sql="insert into `staffRecord` (staffid,surname,other,username,password,status) values('$StaffID','$surname','$other','$username','$password','$status')";
+      $sql="insert into `staffRecord` (staffid,surname,other,username,password,status) values('$staffid','$surname','$other','$username','$password','$status')";
 
       $result=mysqli_query($con,$sql);
 
@@ -63,25 +63,26 @@
           <h2 class="hero-text">Staff Registration</h2>
         </div>
         <div class="form-input-container">
+          <div class="error"><b><?php echo $output  ?></b></div>
           <div class="form-input">
             <label>Staff ID:</label>
-            <input type="text" class="form-control" placeholder="Enter your Staff-ID" autocomplete="off" name="staffID" required>
+            <input type="text" class="form-control" placeholder="Enter your Staff-ID" autocomplete="off" name="staffid" >
           </div>
           <div class="form-input">
             <label>Surname:</label>
-            <input type="text" class="form-control" placeholder="Enter your Surname" autocomplete="off" name="surname" required>
+            <input type="text" class="form-control" placeholder="Enter your Surname" autocomplete="off" name="surname" >
           </div>
           <div class="form-input">
             <label>Other names:</label>
-            <input type="text" class="form-control" placeholder="Enter your Other names" autocomplete="off" name="other" required>
+            <input type="text" class="form-control" placeholder="Enter your Other names" autocomplete="off" name="other" >
           </div>
           <div class="form-input">
             <label>Username:</label>
-            <input type="text" class="form-control" placeholder="Enter username" autocomplete="off" name="username" required>
+            <input type="text" class="form-control" placeholder="Enter username" autocomplete="off" name="username" >
           </div>
           <div class="form-input">
             <label>Desired passowrd:</label>
-            <input type="password" class="form-control" placeholder="Enter your desired password" autocomplete="off" name="password" required>
+            <input type="password" class="form-control" placeholder="Enter your desired password" autocomplete="off" name="password" >
           </div>
           <div class="form-submit">
             <input type="submit" value="Register" name="submit">
