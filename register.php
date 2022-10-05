@@ -67,23 +67,23 @@
         <div class="error"><b><?php echo $output  ?></b></div>
         <div class="form-input">
           <label>Matric No:</label>
-          <input type="text" placeholder="Enter your Matric number" autocomplete="off" name="matric" required>
+          <input type="text" placeholder="Enter your Matric number" autocomplete="on" name="matric" required>
         </div>
         <div class="form-input">
           <label>Surname:</label>
-          <input type="text" placeholder="Enter your Surname" autocomplete="off" name="surname" required>
+          <input type="text" placeholder="Enter your Surname" autocomplete="on" name="surname" required>
         </div>
         <div class="form-input">
           <label>Other names:</label>
-          <input type="text" placeholder="Enter your Other names" autocomplete="off" name="other" required>
+          <input type="text" placeholder="Enter your Other names" autocomplete="on" name="other" required>
         </div>
         <div class="form-input">
           <label>Phone number:</label>
-          <input type="tel" placeholder="Enter your phone number" autocomplete="off" name="phone" required>
+          <input type="tel" placeholder="Enter your phone number" autocomplete="on" name="phone" required>
         </div>
         <div class="form-input">
           <label>WIFI Mac Address:</label>
-          <input type="text" placeholder="Enter your WIFI Mac address" autocomplete="off" name="mac" required>
+          <input type="text" placeholder="Enter your WIFI Mac address" autocomplete="on" name="mac" required>
         </div>
         <div class="form-submit">
           <input type="submit" value="Register" name="register">

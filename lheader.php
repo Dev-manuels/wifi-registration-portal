@@ -12,13 +12,13 @@
 
 ?>
 
-<nav class="dash-nav">
+<nav>
       <div class="logo-container">
-        <a href="https://federalpolyilaro.edu.ng"><img class="logo" src="img/logo.png" alt="FPI logo" height="71px" width="180px"></a>
+        <a href="https://federalpolyilaro.edu.ng"><img class="logo" src="https://federalpolyilaro.edu.ng/images/header-logo.png" alt="FPI logo" height="70px" width="180px"></a>
       </div>
-      <ul class="main-nav login-links">
-          <li><a class="active white-text" href="dashboard.php">Dashboard</a></li>
-          <li><a class="white-text" href="adminRegister.php">Register New-Admin</a></li>
-          <li><a class="white-text" href=""><form method="post"><input class="logout" type="submit" value="Logout" name="logout"></form></a></li>
+      <ul class="main-nav">
+          <li><a class="active" href="dashboard.php">Dashboard</a></li>
+          <li><a href="adminRegister.php">Register New-Admin</a></li>
+          <li><form method="post"><input class="logout" type="submit" value="Logout" name="logout"></form></li>
       </ul> 
 </nav>

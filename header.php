@@ -8,7 +8,7 @@
         <div class="logo-container">
           <a href="https://federalpolyilaro.edu.ng"><img class="logo" src="https://federalpolyilaro.edu.ng/images/header-logo.png" alt="FPI logo" height="70px" width="180px"></a>
         </div>
-        <ul class="main-nav login-links">
+        <ul class="main-nav">
             <li><a class="active" href="index.php">Login</a></li>
             <li><a href="register.php">Register</a></li>
         </ul> 

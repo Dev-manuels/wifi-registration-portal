@@ -20,7 +20,7 @@ ol, ul, li{
   list-style: none;
 }
 tr,td {
-  text-align:left;
+  text-align:center;
 }
 main{
   margin-top: 12vh;
@@ -33,7 +33,7 @@ main{
   color: red !important;
   font-size: 2rem;
 }
-.white-text{
+.white-text,.table{
   color: #fff !important;
 }
 
@@ -82,6 +82,7 @@ nav{
   font-size: 1rem;
 }
 .dash-nav{
+  display: flex;
   background-color: rgba(0, 0, 0, 0.7);
 }
 
@@ -131,6 +132,7 @@ nav{
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+  background-attachment: fixed;
   padding-bottom: 60px;
 }
 .login-main-text{
@@ -205,20 +207,21 @@ nav{
   cursor: pointer;
   transition: 0.3s;
 }
-.form-submit > input[type=submit]:hover,.logout:hover{
+.form-submit > input[type=submit]:hover{
   background-color: #fff ;
   color: black ;
   cursor: pointer;
 }
 /* logout button */
 .logout{
-  color: #fff;
+  color: black;
   background-color: transparent;
   font-weight: bold;
   padding: 5px;
   border-radius: 20px;
   margin-right: 20px;
 }
+
 
 
 /* TABLE STYLE */
@@ -231,6 +234,10 @@ nav{
   margin-left:auto; 
   margin-right:auto; 
   width:100%;
+  margin-bottom: 50px;
+}
+.hack{
+  height: 10px;
 }
 /* Buttons */
 .btn-container,.buttons-container{
@@ -244,19 +251,21 @@ nav{
   margin: 10px 0;
   cursor: pointer;
   font-weight: bold;
+  color: #fff;
 }
-
 .btn-update{
-  color: black;
-  background-color: rgb(148,251,122);
+  background-color: rgb(134, 224, 111);
 }
-.btn-delete{
-  color: black;
+.btn-delete,.logout:hover{
   background-color: rgb(247, 17, 17);
 }
 .btn-done{
   color: black;
-  background-color: rgb(60, 214, 21);
+  background-color: #fff;
+}
+.btn-update:hover,.btn-delete:hover,.btn-done:hover{
+  background-color: transparent;
+  color: #fff;
 }
 
 
