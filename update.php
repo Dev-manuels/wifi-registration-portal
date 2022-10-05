@@ -57,19 +57,46 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <?php include 'links.php';?>
     <title>UPDATE</title>
   </head>
   <body>
-    <?php include 'lheader.php'; ?>
-    <div class="Container mt-5">
-        <div class="col-md-12">
-          <div class="row d-flex justify-content-center">
-            <div class="col-md-6 shadow-sm">
-              <div class="container-fluid">
-                <h1 class= "text-center">Welcome to FPI hotspot registration portal</h1>
-                <h2 class= "text-center">REGISTER</h2>
-                <div class="text-center text-danger"><?php echo $output  ?></div>
-                <br>
+    <?php include 'lheader.php';?>
+    <main class="main-register">
+  
+      <form method="post" class="form-container">
+      <div class="login-main-text">
+          <h2 class="hero-text-main">FPI hotspot registration portal</h2>
+          <h2 class="hero-text">Update Details</h2>
+      </div>
+      <div class="form-input-container">
+        <div class="error"><b><?php echo $output  ?></b></div>
+        <div class="form-input">
+          <label>Matric No:</label>
+          <input type="text" placeholder="Enter your Matric number" autocomplete="off" name="matric" value=<?php echo $matric;?> readonly>
+        </div>
+        <div class="form-input">
+          <label>Surname:</label>
+          <input type="text" placeholder="Enter your Surname" autocomplete="off" name="surname" value=<?php echo $surname;?> required>
+        </div>
+        <div class="form-input">
+          <label>Other names:</label>
+          <input type="text" placeholder="Enter your Other names" autocomplete="off" name="other" value=<?php echo $other;?> required>
+        </div>
+        <div class="form-input">
+          <label>Phone number:</label>
+          <input type="tel" placeholder="Enter your phone number" autocomplete="off" name="phone" value=<?php echo $phone;?> required>
+        </div>
+        <div class="form-input">
+          <label>WIFI Mac Address:</label>
+          <input type="text" placeholder="Enter your WIFI Mac address" autocomplete="off" name="mac" value=<?php echo $mac;?> required>
+        </div>
+        <div class="form-submit">
+          <input type="submit" value="Update" name="submit">
+        </div>
+      </div>
+      </form>
+    </main>    <!-- 
                 <form method="post">
                   <div class="form-group">
                     <label>Matric No:</label>
@@ -92,12 +119,8 @@
                     <input type="text" class="form-control" placeholder="Enter your WIFI Mac address" autocomplete="off"  name="mac" value=<?php echo $mac;?>>
                   </div>
                   <button type="submit" class="btn btn-primary mt-3 mb-2" name="submit">Update</button>
-                </form>
-              </div>
-            </div>
-          </div>
-        </div> 
-    </div>
+                </form> -->
+              
 
 
 

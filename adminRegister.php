@@ -3,7 +3,7 @@
 
   $output="";
 
-  if(isset($_POST['Register'])){
+  if(isset($_POST['register'])){
     $email=$_POST['email'];
     $passc=$_POST['passc'];
     $pass=$_POST['pass'];
@@ -48,48 +48,42 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <?php include 'links.php';?>
     <title>ADMIN-REGISTER</title>
   </head>
   <body>
-  <?php include 'header.php'; ?>
-    <div class="Container mt-5">
-      <div class="col-md-12">
-        <div class="row d-flex justify-content-center">
-          <div class="col-md-6 shadow-sm">
-            <div class="container-fluid">
-              <h1 class= "text-center">Welcome to FPI hotspot admin registration portal</h1>
-              <h2 class= "text-center">REGISTER</h2>
-              <div class="text-center text-danger"><?php echo $output  ?></div>
-              <form method="post">
-                <div class="form-group">
-                  <label>Email:</label>
-                  <input type="email" class="form-control" placeholder="Enter your Email" autocomplete="off" name="email">
-                </div>
-                <div class="form-group">
-                  <label>Password:</label>
-                  <input type="password" class="form-control" placeholder="Enter your Password" autocomplete="off" name="pass">
-                </div>
-                <div class="form-group">
-                  <label>Confirm Password:</label>
-                  <input type="password" class="form-control" placeholder="Confirm Password" autocomplete="off" name="passc">
-                </div>
-                <button type="submit" class="btn btn-primary mb-2" name="Register">Register</button>
-              </form>
-            </div>
+  <?php include 'lheader.php';?>
+    <main class="main-login">
+    
+      <form method="post" class="form-container">
+          <div class="login-main-text">
+              <h2 class="hero-text-main">Welcome to FPI Hotspot</h2>
+              <h2 class="hero-text">Admin Register</h2>
           </div>
+          <div style="color: red;, font-size: 2rem;"><b><?php echo $output  ?></b></div>
+          <div class="form-input-container">
+              <div class="form-input">
+                  <label for="Email">Email:</label>
+                  <input type="email" class="form-control" placeholder="Enter your Email" autocomplete="off" name="email">
+              </div>
 
-        </div>
-      </div> 
-    </div>
+              <input type="text" name="username" style="display: none;">
+              <div class="form-input">
+                  <label for="Password">Password:</label>
+                  <input type="password" class="form-control" placeholder="Enter your Password" autocomplete="off" name="pass">
+              </div>
+              <div class="form-input">
+                  <label for="Confirm Password">Password:</label>
+                  <input type="password" class="form-control" placeholder="Confirm Password" autocomplete="off" name="passc">
+              </div>
+              <div class="form-submit">
+                  <input type="submit" name="register" value="Register">
+              </div>
+          </div>
+      </form>
 
-
-
-
-    <!-- jQuery library -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-
-    <!-- Latest compiled JavaScript -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    </main>
+    <?php include 'scripts.php'; ?>
   </body>
 </html>
 

@@ -12,18 +12,14 @@ include 'connection.php'?>
     <title>DASHBOARD</title>
   </head>
   <body>
-    <nav class="dashboard-nav">
-      <div class="logo-container">
-        <a href="https://federalpolyilaro.edu.ng"><img class="logo" src="img/logo.png" alt="FPI logo" height="71px" width="180px"></a>
-      </div>
-      <ul class="main-nav login-links">
-          <li><a class="active white-text" href="index.php">Login</a></li>
-          <li><a class="white-text" href="register.php">Register</a></li>
-      </ul> 
-    </nav>
+  <?php include 'lheader.php';?>
     <main>
+      <div class="buttons-container">
       <a href="register.php"><button>Register Student</button></a>
       <a href="sregister.php"><button>Register Staff</button></a>
+      <a href="register.php"><button>View Registered Student</button></a>
+      <a href="sregister.php"><button>View registered Staff</button></a>
+      </div>
    
       <div class="main-text">
         <h2 class="hero-main">Welcome to FPI hotspot records</h2>

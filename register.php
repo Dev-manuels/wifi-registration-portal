@@ -79,7 +79,7 @@
         </div>
         <div class="form-input">
           <label>Phone number:</label>
-          <input type="number" placeholder="Enter your phone number" autocomplete="off" name="phone" required>
+          <input type="tel" placeholder="Enter your phone number" autocomplete="off" name="phone" required>
         </div>
         <div class="form-input">
           <label>WIFI Mac Address:</label>
