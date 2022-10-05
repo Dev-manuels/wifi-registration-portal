@@ -22,12 +22,12 @@
   </head>
   <body>
   <?php include 'lheader.php';?>
-    <main>
+    <main class="main-dashboard">
       <div class="buttons-container">
-      <a href="register.php"><button>Register Student</button></a>
-      <a href="sregister.php"><button>Register Staff</button></a>
-      <a href="register.php"><button>View Registered Student</button></a>
-      <a href="sregister.php"><button>View registered Staff</button></a>
+      <a href="register.php"><button class="btn-done">Register Student</button></a>
+      <a href="sregister.php"><button class="btn-update">Register Staff</button></a>
+      <a href="register.php"><button class="btn-done">View Registered Student</button></a>
+      <a href="sregister.php"><button class="btn-update">View registered Staff</button></a>
       </div>
    
       <div class="main-text">

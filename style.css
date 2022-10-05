@@ -124,6 +124,15 @@ nav{
   height: fit-content;
   padding-bottom: 60px;
 }
+.main-dashboard{
+  background-image:
+  linear-gradient(21deg, rgba(4,9,30,0.7) 0%, rgba(4,9,30,0.7) 50%, rgba(4,9,30,0.7) 100%),
+  url("https://images.unsplash.com/photo-1609334761848-77b4d1994040?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  padding-bottom: 60px;
+}
 .login-main-text{
   display: flex;
   flex-direction: column;
@@ -224,7 +233,7 @@ nav{
   width:100%;
 }
 /* Buttons */
-.btn-container{
+.btn-container,.buttons-container{
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
@@ -234,10 +243,20 @@ nav{
   border-radius: 20px;
   margin: 10px 0;
   cursor: pointer;
+  font-weight: bold;
 }
 
 .btn-update{
-  
+  color: black;
+  background-color: rgb(148,251,122);
+}
+.btn-delete{
+  color: black;
+  background-color: rgb(247, 17, 17);
+}
+.btn-done{
+  color: black;
+  background-color: rgb(60, 214, 21);
 }
 
 
