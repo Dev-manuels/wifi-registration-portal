@@ -141,6 +141,17 @@ nav{
   color: black;
 }
 
+/* Success page style */
+.success-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.success-img{
+  height: 50%;
+  width: auto;
+}
+
 /* FORM STYLES */
 .form-container{
   margin-top: 25px;
@@ -185,11 +196,23 @@ nav{
   cursor: pointer;
   transition: 0.3s;
 }
-.form-submit > input[type=submit]:hover{
+.form-submit > input[type=submit]:hover,.logout:hover{
   background-color: #fff ;
-  color: black;
+  color: black ;
+  cursor: pointer;
+}
+/* logout button */
+.logout{
+  color: #fff;
+  background-color: transparent;
+  font-weight: bold;
+  padding: 5px;
+  border-radius: 20px;
+  margin-right: 20px;
 }
 
+
+/* TABLE STYLE */
 .table-container{
   width:98%; 
   margin:1%; 
@@ -200,11 +223,21 @@ nav{
   margin-right:auto; 
   width:100%;
 }
-
-.success-container{
+/* Buttons */
+.btn-container{
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+.btn-update,.btn-delete,.btn-done{
+  padding: 5px;
+  border-radius: 20px;
+  margin: 10px 0;
+  cursor: pointer;
+}
+
+.btn-update{
+  
 }
 
 

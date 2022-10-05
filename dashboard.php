@@ -1,6 +1,15 @@
-<?php 
-include 'connection.php'?>
+<?php
+    include 'connection.php';
+    session_start();
 
+    if ($_SESSION['valid'] != true) {
+        $_SESSION['message'] = "Please login!";
+        header("Location:index.php");
+    }else{
+        $_SESSION['message'] = "";
+    }
+
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -71,15 +80,18 @@ include 'connection.php'?>
               <td><b>'.$status.'</b></td>
               <td><b>'.$date.'</b></td>
               <td>
-              <a href="update.php?updateid='.$id.'"" ><button>UPDATE</button></a>
-              <a href="delete.php?deleteid='.$id.'" ><button>DELETE</button></a>
-              <a href="done.php?doneid='.$id.'" ><button>DONE</button></a>
+              <div class="btn-container">
+              <a href="update.php?updateid='.$id.'"" ><button class="btn-update">UPDATE</button></a>
+              <a href="delete.php?deleteid='.$id.'" ><button class="btn-delete">DELETE</button></a>
+              <a href="done.php?doneid='.$id.'" ><button class="btn-done">DONE</button></a>
+            </div>
               </td>
             </tr>' ;   
             }
           }
         ?>
       </div>
+      
     </main>
     
     <?php include 'scripts.php'; ?>

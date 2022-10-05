@@ -1,8 +1,10 @@
-<!-- 
+
 <?php
   include 'connection.php';
+  session_start();
 
-  $output="";
+  $output=$_SESSION['message'];
+  $_SESSION['message'] = "";
 
   if(isset($_POST['Login'])){
     $email=$_POST['email'];
@@ -17,7 +19,9 @@
       $res = mysqli_query($con,$query);
 
       if(mysqli_num_rows($res) == 1){
-          header('location:dashboard.php');
+        $_SESSION['valid'] = true;
+        $_SESSION['username'] = $email;
+        header('location:dashboard.php');
       }else {
           $output .= "Enter valid user credentials";
       }
@@ -27,7 +31,6 @@
   }
 
 ?>
- -->
 
 
 
@@ -55,7 +58,7 @@
                 <h2 class="hero-text-main">Welcome to FPI Hotspot</h2>
                 <h2 class="hero-text">Login Portal</h2>
             </div>
-            <div style="color: red;, font-size: 2rem;"><b><?php echo $output  ?></b></div>
+            <div class="error"><b><?php echo $output  ?></b></div>
             <div class="form-input-container">
                 <div class="form-input">
                     <label for="Email">Email:</label>
