@@ -25,7 +25,8 @@
     <main>
       <div class="buttons-container hack">
         <a href="dashboard.php"><button class="btn-done">Back to Dashboard</button></a>
-        <a href="register.php"><button class="btn-done">Register New Student</button></a>
+        <a href="register.php"><button class="btn-update">Register New Student</button></a>
+        <a href="Rstudents.php"><button class="btn-done">View Registered Student</button></a>
         <a href="sregister.php"><button class="btn-update">Register New Staff</button></a>
       </div>
    
@@ -37,7 +38,7 @@
           <thead id="staff" class="">
             <tr>
               <!-- <th scope="col">#</th> -->
-              <th scope="col">staffID</th>
+              <th scope="col">STAFF-ID</th>
               <th scope="col">SURNAME</th>
               <th scope="col">OTHER NAMES</th>
               <th scope="col">USERNAME</th>
@@ -50,13 +51,13 @@
           <tbody>
             <!-- php code to read from database and display-->
             <?php 
-              $sql= "SELECT * from `staffRecord` WHERE status = 'Registered'";
+              $sql= "SELECT * from `staffRecord` WHERE status = 'Registered' ORDER BY `staffRecord`.`surname` ASC";
               $result = mysqli_query($con,$sql);
               
               if($result){
                 while ($row=mysqli_fetch_assoc($result)) {
                   $id=$row['id'];
-                  $StaffId=$row['staffid'];
+                  $StaffId=$row['staffId'];
                   $surname=$row['surname'];
                   $other=$row['other'];
                   $Username=$row['username'];
@@ -64,7 +65,6 @@
                   $status=$row['status'];
                   $date=$row['date'];
                   
-                  //<th scope="row">'.$id.'</th>
                   echo ' <tr>
                   
                   <td><b>'.$StaffId.'</b></td>
@@ -78,7 +78,6 @@
                   <div class="btn-container">
                   <a href="StaffUpdate.php?updateid='.$id.'"" ><button class="btn-update">UPDATE</button></a>
                   <a href="StaffDelete.php?deleteid='.$id.'" ><button class="btn-delete">DELETE</button></a>
-                  <a href="StaffDone.php?doneid='.$id.'" ><button class="btn-done">DONE</button></a>
                 </div>
                   </td>
                 </tr>' ;   

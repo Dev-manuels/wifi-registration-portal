@@ -25,13 +25,13 @@
     <main>
       <div class="buttons-container hack">
         <a href="dashboard.php"><button class="btn-done">Back to Dashboard</button></a>
-        <a href="register.php"><button class="btn-done">Register New Student</button></a>
-        <a href="sregister.php"><button class="btn-update">Register New Staff</button></a>
-        <a href="sregister.php"><button class="btn-update">View registered Staff</button></a>
+        <a href="register.php"><button class="btn-update">Register New Student</button></a>
+        <a href="sregister.php"><button class="btn-done">Register New Staff</button></a>
+        <a href="Rstaffs.php"><button class="btn-update">View registered Staff</button></a>
       </div>
    
       <div class="main-text">
-        <h2 class="hero-main white-text">Welcome to FPI hotspot records</h2>
+        <h2 class="hero-main white-text">Registered Students</h2>
       </div>
       <div class="table-container">
       <table class="table" border="1px">
@@ -51,7 +51,7 @@
         <tbody>
           <!-- php code to read from database and display-->
           <?php 
-            $sql= "SELECT * from `studentRecord` WHERE status = 'Registered'";
+            $sql= "SELECT * from `studentRecord` WHERE status = 'Registered' ORDER BY `studentRecord`.`surname` ASC";
             $result = mysqli_query($con,$sql);
             
             if($result){
@@ -79,7 +79,6 @@
                 <div class="btn-container">
                 <a href="update.php?updateid='.$id.'"" ><button class="btn-update">UPDATE</button></a>
                 <a href="delete.php?deleteid='.$id.'" ><button class="btn-delete">DELETE</button></a>
-                <a href="done.php?doneid='.$id.'" ><button class="btn-done">DONE</button></a>
               </div>
                 </td>
               </tr>' ;   
