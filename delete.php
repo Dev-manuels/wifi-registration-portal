@@ -9,7 +9,7 @@
     $result=mysqli_query($con,$sql);
     if($result){
       // echo "deleted succesfully";
-      header('location:dashboard.php');
+      header('location:Rstudents.php');
     }else{
       die(mysqli_error($con));
     }

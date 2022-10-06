@@ -34,7 +34,7 @@
         $output .= "Mac address can not empty";
       } else {
 
-        $sql="update `studentRecord` set id=$id,matric='$matric',surname='$surname',other='$other',phone='$phone',mac='$mac'  where id=$id";
+        $sql="update `studentRecord` set surname='$surname',other='$other',phone='$phone',mac='$mac'  where id=$id";
 
         $result=mysqli_query($con,$sql);
 
@@ -96,36 +96,9 @@
         </div>
       </div>
       </form>
-    </main>    <!-- 
-                <form method="post">
-                  <div class="form-group">
-                    <label>Matric No:</label>
-                    <input type="text" class="form-control" placeholder="Enter your Matric number" autocomplete="off" name="matric" value=<?php echo $matric;?> readonly >
-                  </div>
-                  <div class="form-group">
-                    <label>Surname:</label>
-                    <input type="text" class="form-control" placeholder="Enter your Surname" autocomplete="off"  name="surname" value=<?php echo $surname;?> >
-                  </div>
-                  <div class="form-group">
-                    <label>Other names:</label>
-                    <input type="text" class="form-control" placeholder="Enter your Other names" autocomplete="off" name="other" value=<?php echo $other;?> >
-                  </div>
-                  <div class="form-group">
-                    <label>Phone number:</label>
-                    <input type="number" class="form-control" placeholder="Enter your phone number" autocomplete="off"  name="phone" value=<?php echo $phone;?>>
-                  </div>
-                  <div class="form-group">
-                    <label>WIFI Mac Address:</label>
-                    <input type="text" class="form-control" placeholder="Enter your WIFI Mac address" autocomplete="off"  name="mac" value=<?php echo $mac;?>>
-                  </div>
-                  <button type="submit" class="btn btn-primary mt-3 mb-2" name="submit">Update</button>
-                </form> -->
-              
-
-
+    </main>   
 
 
     <?php include 'scripts.php'; ?>
   </body>
 </html>
-
