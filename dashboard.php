@@ -28,7 +28,7 @@
       <a href="sregister.php"><button class="btn-update">Register New Staff</button></a>
       <a href="Rstudents.php"><button class="btn-done">View Registered Student</button></a>
       <a href="#staff"><button class="btn-update">View Pending Staff</button></a>
-      <a href="Rstaffs.php"><button class="btn-update">View Registered Staff</button></a>
+      <a href="Rstaffs.php"><button class="btn-done">View Registered Staff</button></a>
       </div>
    
       <div class="main-text">
@@ -38,7 +38,6 @@
       <table class="table" border="1px">
         <thead class="">
           <tr>
-            <!-- <th scope="col">#</th> -->
             <th scope="col">MATRIC NO</th>
             <th scope="col">SURNAME</th>
             <th scope="col">OTHER NAMES</th>
@@ -52,7 +51,7 @@
         <tbody>
           <!-- php code to read from database and display-->
           <?php 
-            $sql= "SELECT * from `studentRecord` WHERE status = 'Pending'";
+            $sql= "SELECT * from `studentRecord` WHERE status = 'Pending' ORDER BY `studentRecord`.`date` ASC";
             $result = mysqli_query($con,$sql);
             
             if($result){
@@ -66,7 +65,6 @@
                 $status=$row['status'];
                 $date=$row['date'];
                 
-                //<th scope="row">'.$id.'</th>
                 echo ' <tr>
                 
                 <td><b>'.$matric.'</b></td>
@@ -80,7 +78,7 @@
                 <div class="btn-container">
                 <a href="update.php?updateid='.$id.'"" ><button class="btn-update">UPDATE</button></a>
                 <a href="delete.php?deleteid='.$id.'" ><button class="btn-delete">DELETE</button></a>
-                <a href="done.php?doneid='.$id.'" ><button class="btn-done">DONE</button></a>
+                <a href="done.php?doneid='.$id.'" ><button class="btn-done">UPDATE STATUS</button></a>
               </div>
                 </td>
               </tr>' ;   
@@ -99,8 +97,8 @@
         <table class="table" border="1px">
           <thead id="staff" class="">
             <tr>
-              <!-- <th scope="col">#</th> -->
-              <th scope="col">staffID</th>
+              
+              <th scope="col">STAFF-ID</th>
               <th scope="col">SURNAME</th>
               <th scope="col">OTHER NAMES</th>
               <th scope="col">USERNAME</th>
@@ -113,13 +111,13 @@
           <tbody>
             <!-- php code to read from database and display-->
             <?php 
-              $sql= "SELECT * from `staffRecord` WHERE status = 'pending'";
+              $sql= "SELECT * from `staffRecord` WHERE status = 'pending' ORDER BY `staffRecord`.`date` ASC";
               $result = mysqli_query($con,$sql);
               
               if($result){
                 while ($row=mysqli_fetch_assoc($result)) {
                   $id=$row['id'];
-                  $StaffId=$row['staffid'];
+                  $StaffId=$row['staffId'];
                   $surname=$row['surname'];
                   $other=$row['other'];
                   $Username=$row['username'];
@@ -127,7 +125,6 @@
                   $status=$row['status'];
                   $date=$row['date'];
                   
-                  //<th scope="row">'.$id.'</th>
                   echo ' <tr>
                   
                   <td><b>'.$StaffId.'</b></td>
@@ -139,9 +136,9 @@
                   <td><b>'.$date.'</b></td>
                   <td>
                   <div class="btn-container">
-                  <a href="StaffUpdate.php?updateid='.$id.'"" ><button class="btn-update">UPDATE</button></a>
-                  <a href="StaffDelete.php?deleteid='.$id.'" ><button class="btn-delete">DELETE</button></a>
-                  <a href="StaffDone.php?doneid='.$id.'" ><button class="btn-done">DONE</button></a>
+                    <a href="StaffUpdate.php?updateid='.$id.'"" ><button class="btn-update">UPDATE</button></a>
+                    <a href="StaffDelete.php?deleteid='.$id.'" ><button class="btn-delete">DELETE</button></a>
+                    <a href="StaffDone.php?doneid='.$id.'" ><button class="btn-done">UPDATE STATUS</button></a>
                 </div>
                   </td>
                 </tr>' ;   
