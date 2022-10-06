@@ -87,7 +87,7 @@
             <input type="password" class="form-control" value="<?php echo $password;?>" placeholder="Enter your desired password" autocomplete="off" name="password" >
           </div>
           <div class="form-submit">
-            <input type="submit" value="Register" name="submit">
+            <input type="submit" value="UPDATE" name="submit">
           </div>
         </div>
       </form>

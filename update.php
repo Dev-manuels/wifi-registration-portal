@@ -40,7 +40,7 @@
 
         if ($result) {
           
-          header('location:dashboard.php');
+          header('location:Rstudents.php');
         } else {
           die(mysqli_error($con));
         }
@@ -92,7 +92,7 @@
           <input type="text" placeholder="Enter your WIFI Mac address" autocomplete="off" name="mac" value="<?php echo $mac;?>" required>
         </div>
         <div class="form-submit">
-          <input type="submit" value="Update" name="submit">
+          <input type="submit" value="UPDATE" name="submit">
         </div>
       </div>
       </form>

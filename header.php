@@ -16,7 +16,8 @@
           </div>
           <ul class="main-nav">
               <li><a class="active" href="index.php">Login</a></li>
-              <li><a href="register.php">Register</a></li>
+              <li><a href="register.php">Student</a></li>
+              <li><a href="sregister.php">Staff</a></li>
           </ul> 
         </nav>';
       }else{

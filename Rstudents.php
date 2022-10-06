@@ -77,8 +77,8 @@
                 <td><b>'.$date.'</b></td>
                 <td>
                 <div class="btn-container">
-                <a href="update.php?updateid='.$id.'"" ><button class="btn-update">UPDATE</button></a>
-                <a href="delete.php?deleteid='.$id.'" ><button class="btn-delete">DELETE</button></a>
+                <a href="update.php?updateid='.$id.'"" ><button class="btn-update">EDIT</button></a>
+                <a href="delete.php?deleteid='.$id.'" ><button  class="btn-delete">DELETE</button></a>
               </div>
                 </td>
               </tr>' ;   
