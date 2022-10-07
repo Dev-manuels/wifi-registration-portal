@@ -35,6 +35,8 @@
       $result=mysqli_query($con,$sql);
 
       if ($result) {
+        $_SESSION['username'] = $matric;
+        $_SESSION['password'] = $other;
         header('location:success.php');
       } else {
         die(mysqli_error($con));
@@ -52,7 +54,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>REGISTER</title>
+    <title>STUDENT REGISTER</title>
   </head>
   <body>
     <?php include 'header.php'; ?>
@@ -74,12 +76,12 @@
           <input type="text" placeholder="Enter your Surname" autocomplete="on" name="surname" required>
         </div>
         <div class="form-input">
-          <label>Other names:</label>
-          <input type="text" placeholder="Enter your Other names" autocomplete="on" name="other" required>
+          <label>Middle name:</label>
+          <input type="text" placeholder="Enter your Middle name" autocomplete="on" name="other" required>
         </div>
         <div class="form-input">
           <label>Phone number:</label>
-          <input type="tel" placeholder="Enter your phone number" autocomplete="on" name="phone" required>
+          <input type="number" placeholder="Enter your phone number" autocomplete="on" name="phone" required>
         </div>
         <div class="form-input">
           <label>WIFI Mac Address:</label>

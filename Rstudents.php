@@ -44,7 +44,7 @@
             <th scope="col">PHONE NO</th>
             <th scope="col">MAC ADDRESS</th>
             <th scope="col">REGISTATION-STATUS</th>
-            <th scope="col">ENTRY-DATE</th>
+            <th scope="col">DATE REGISTERED</th>
             <th scope="col">OPERATIONS</th>
           </tr>
         </thead>

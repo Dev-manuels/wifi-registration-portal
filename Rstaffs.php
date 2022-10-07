@@ -44,7 +44,7 @@
               <th scope="col">USERNAME</th>
               <th scope="col">PASSWORD</th>
               <th scope="col">REGISTATION-STATUS</th>
-              <th scope="col">ENTRY-DATE</th>
+              <th scope="col">DATE REGISTERED</th>
               <th scope="col">OPERATIONS</th>
             </tr>
           </thead>
