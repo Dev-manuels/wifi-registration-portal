@@ -16,25 +16,13 @@
 
   
   if(isset($_POST['submit'])){
-      $matric=$_POST['matric'];
-      $surname=$_POST['surname'];
-      $other=$_POST['other'];
-      $phone=$_POST['phone'];
       $mac=$_POST['mac'];
 
-      if(empty($matric)){
-        $output .= "Matric number can not empty";
-      } else if(empty($surname)){
-        $output .= "Surname can not empty";
-      } else if(empty($other)){
-        $output .= "Other name can not empty";
-      } else if(empty($phone)){
-        $output .= "Phone number can not empty";
-      }  else if(empty($mac)){
+      if(empty($mac)){
         $output .= "Mac address can not empty";
       } else {
 
-        $sql="update `studentRecord` set surname='$surname',other='$other',phone='$phone',mac='$mac'  where id=$id";
+        $sql="update `studentRecord` set mac='$mac'  where id=$id";
 
         $result=mysqli_query($con,$sql);
 
@@ -77,15 +65,15 @@
         </div>
         <div class="form-input">
           <label>Surname:</label>
-          <input type="text" placeholder="Enter your Surname" autocomplete="off" name="surname" value="<?php echo $surname;?>" required>
+          <input type="text" placeholder="Enter your Surname" autocomplete="off" name="surname" value="<?php echo $surname;?>" required readonly>
         </div>
         <div class="form-input">
           <label>Other names:</label>
-          <input type="text" placeholder="Enter your Other names" autocomplete="off" name="other" value="<?php echo $other;?>" required>
+          <input type="text" placeholder="Enter your Other names" autocomplete="off" name="other" value="<?php echo $other;?>" required readonly>
         </div>
         <div class="form-input">
           <label>Phone number:</label>
-          <input type="tel" placeholder="Enter your phone number" autocomplete="off" name="phone" value="<?php echo $phone;?>" required>
+          <input type="number" placeholder="Enter your phone number" autocomplete="off" name="phone" value="<?php echo $phone;?>" required readonly>
         </div>
         <div class="form-input">
           <label>WIFI Mac Address:</label>
