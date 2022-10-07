@@ -60,14 +60,16 @@
               <h2 class="hero-text-main">Welcome to FPI Hotspot</h2>
               <h2 class="hero-text">Admin Register</h2>
           </div>
-          <div style="color: red;, font-size: 2rem;"><b><?php echo $output  ?></b></div>
+          <div class="error"><b><?php echo $output  ?></b></div>
           <div class="form-input-container">
               <div class="form-input">
                   <label for="Email">Email:</label>
                   <input type="email" class="form-control" placeholder="Enter your Email" autocomplete="off" name="email">
               </div>
-
-              <input type="text" name="username" style="display: none;">
+              <div class="form-input">
+                <label>Username:</label>
+                <input type="text" class="form-control" placeholder="Enter username" autocomplete="off" name="username" >
+              </div>
               <div class="form-input">
                   <label for="Password">Password:</label>
                   <input type="password" class="form-control" placeholder="Enter your Password" autocomplete="off" name="pass">
