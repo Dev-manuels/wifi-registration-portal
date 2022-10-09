@@ -18,6 +18,7 @@
               <li><a class="active" href="index.php">Login</a></li>
               <li><a href="register.php">Student</a></li>
               <li><a href="sregister.php">Staff</a></li>
+              <li><a href="checker.php">Check Status</a></li>
           </ul> 
         </nav>';
       }else{
