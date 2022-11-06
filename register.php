@@ -1,6 +1,6 @@
 <?php
   include 'connection.php';
-
+  session_start();
   $output="";
 
   if(isset($_POST['register'])){
@@ -30,7 +30,8 @@
       $output .= "Matric number has already been registred, Visit the office to update your details";
     }
      else {
-      $sql="insert into `studentRecord` (matric,surname,other,phone,mac,status) values('$matric','$surname','$other','$phone','$mac','$status')";
+      $sql="insert into `studentRecord` (matric,surname,other,phone,mac,status) 
+      values('$matric','$surname','$other','$phone','$mac','$status')";
 
       $result=mysqli_query($con,$sql);
 
