@@ -18,6 +18,7 @@
       </div>
       <ul class="main-nav">
           <li><a class="active" href="dashboard.php">Dashboard</a></li>
+          <li><a href="search.php">Search</a></li>
           <li><a href="adminRegister.php">Register New-Admin</a></li>
           <li><form method="post"><input class="logout" type="submit" value="Logout" name="logout"></form></li>
       </ul> 
