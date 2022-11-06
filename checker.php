@@ -19,6 +19,8 @@
         $row=mysqli_fetch_assoc($res);
         $status=$row['status'];
         $output .= "$matric registration status is $status";
+      } else {
+        $output .= "$matric is not found in the Database <br> Please enter valid Info";
       }
 
     }
