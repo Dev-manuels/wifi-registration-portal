@@ -1,6 +1,7 @@
 <?php
   include 'connection.php';
-
+  session_start();
+    include 'logged.php';
 
   if (isset($_GET['deleteid'])) {
     $id=$_GET['deleteid'];

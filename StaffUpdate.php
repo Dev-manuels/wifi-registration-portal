@@ -1,5 +1,7 @@
 <?php
   include 'connection.php';
+  session_start();
+  include 'logged.php';
 
   $id=$_GET['updateid'];
   $output="";
