@@ -210,7 +210,7 @@ nav{
 .form-submit > input[type=submit]:hover{
   background-color: #fff ;
   color: black ;
-  cursor: pointer;
+  cursor: progress;
 }
 /* logout button */
 .logout{
@@ -220,6 +220,7 @@ nav{
   padding: 5px;
   border-radius: 20px;
   margin-right: 20px;
+  cursor: progress;
 }
 
 
@@ -274,7 +275,15 @@ nav{
 @media only screen and (max-width: 500px) {
   nav{
       flex-direction: column;
-      padding-bottom: 2vh;
+      padding-bottom: 14vh;
+      height: 14vh;
+  }
+  main {
+    margin-top: 14vh;
+    height: 86vh;
+  }
+  .hero-text, .hero-text-main {
+    text-align: center;
   }
   .login-main{
       margin-top: 14vh;
@@ -285,5 +294,8 @@ nav{
   }
   .form-row{
       flex-direction: column;
+  }
+  .btn-container, .buttons-container{
+    width: fit-content;
   }
 }
