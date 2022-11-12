@@ -43,8 +43,8 @@
       $result=mysqli_query($con,$sql);
 
       if ($result && $_SESSION['valid'] != true) {
-        $_SESSION['username'] = $matric;
-        $_SESSION['password'] = $other;
+        $_SESSION['username'] = $username;
+        $_SESSION['password'] = $password;
         header('location:success.php');
       } else if ($_SESSION['valid']) {
         header('location:dashboard.php');
