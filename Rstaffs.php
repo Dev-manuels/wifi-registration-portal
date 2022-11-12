@@ -7,14 +7,11 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
     <?php include 'links.php';?>
     <title>Registered Staff</title>
   </head>
   <body class="main-dashboard">
-  <?php include 'lheader.php';?>
+  <?php include 'header.php';?>
     <main>
       <div class="buttons-container hack">
         <a href="dashboard.php"><button class="btn-done">Back to Dashboard</button></a>
@@ -69,7 +66,7 @@
                   <td><b>'.$date.'</b></td>
                   <td>
                   <div class="btn-container">
-                  <a href="StaffUpdate.php?updateid='.$id.'"" ><button class="btn-update">EDIT</button></a>
+                  <a href="StaffUpdate.php?updateid='.$id.'" ><button class="btn-update">EDIT</button></a>
                   <a href="StaffDelete.php?deleteid='.$id.'" ><button class="btn-delete">DELETE</button></a>
                 </div>
                   </td>

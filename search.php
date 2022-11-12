@@ -14,14 +14,11 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
     <?php include 'links.php';?>
     <title>Search</title>
   </head>
   <body class="main-dashboard">
-  <?php include 'lheader.php';?>
+  <?php include 'header.php';?>
     <main>
       <div class="buttons-container hack">
       <a href="register.php"><button class="btn-done">Register New Student</button></a>
@@ -60,7 +57,7 @@
           <!-- php code to search the database and the record-->
           <?php 
             if (isset($_POST['search'])) {
-                $matric=$_POST['matric'];
+                $matric=trim($_POST['matric']);
                 
                 $sql="SELECT * FROM `studentRecord` WHERE matric= '$matric'";
                 $result=mysqli_query($con,$sql);
@@ -98,3 +95,6 @@
       </table>
       </div>
       <div class="hack"></div>
+      </main>
+  </body>
+</html>

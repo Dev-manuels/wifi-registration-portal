@@ -51,11 +51,9 @@
 ?>
 
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <?php include 'links.php';?>
     <title>REGISTER</title>
   </head>
   <body>
@@ -63,7 +61,7 @@
     <main class="main-register">
       <form method="post" class="form-container">
         <div class="login-main-text">
-          <h2 class="hero-text-main">Welcome to FPI hotspot registration portal</h2>
+          <h2 class="hero-text-main">FPI Hotspot Registration Portal</h2>
           <h2 class="hero-text">Staff Registration</h2>
         </div>
         <div class="form-input-container">

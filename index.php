@@ -45,8 +45,7 @@
 <!DOCTYPE html>
 <html lang = "en">
   <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <?php include 'links.php';?>
     <title>LOGIN</title>
   </head>
   <body>
@@ -55,7 +54,7 @@
   
         <form method="post" class="form-container">
             <div class="login-main-text">
-                <h2 class="hero-text-main">Welcome to FPI Hotspot</h2>
+                <h2 class="hero-text-main">Welcome to FPI WIFI Registration</h2>
                 <h2 class="hero-text">Login Portal</h2>
             </div>
             <div class="error"><b><?php echo $output  ?></b></div>

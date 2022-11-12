@@ -4,11 +4,11 @@
   $output="";
 
   if(isset($_POST['register'])){
-    $matric=$_POST['matric'];
-    $surname=$_POST['surname'];
-    $other=$_POST['other'];
+    $matric=trim(strtolower($_POST['matric']));
+    $surname=trim(strtolower($_POST['surname']));
+    $other=trim(strtolower($_POST['other']));
     $phone=$_POST['phone'];
-    $mac=$_POST['mac'];
+    $mac=trim($_POST['mac']);
     $status="Pending";
 
     $query = " SELECT * FROM studentRecord WHERE matric = '$matric'";
@@ -35,10 +35,12 @@
 
       $result=mysqli_query($con,$sql);
 
-      if ($result) {
+      if ($result && $_SESSION['valid'] != true) {
         $_SESSION['username'] = $matric;
         $_SESSION['password'] = $other;
         header('location:success.php');
+      } else if ($_SESSION['valid']) {
+        header('location:dashboard.php');
       } else {
         die(mysqli_error($con));
       }
@@ -50,11 +52,9 @@
 
 
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <?php include 'links.php';?>
     <title>STUDENT REGISTER</title>
   </head>
   <body>
@@ -63,7 +63,7 @@
   
       <form method="post" class="form-container">
       <div class="login-main-text">
-          <h2 class="hero-text-main">Welcome to FPI hotspot registration portal</h2>
+          <h2 class="hero-text-main">Welcome To FPI WIFI Registration Portal</h2>
           <h2 class="hero-text">Student Registration</h2>
       </div>
       <div class="form-input-container">
