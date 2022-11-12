@@ -9,14 +9,11 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
     <?php include 'links.php';?>
     <title>DASHBOARD</title>
   </head>
   <body class="main-dashboard">
-  <?php include 'lheader.php';?>
+  <?php include 'header.php';?>
     <main>
       <div class="buttons-container hack">
       <a href="register.php"><button class="btn-done">Register New Student</button></a>
@@ -24,6 +21,7 @@
       <a href="Rstudents.php"><button class="btn-done">View Registered Student</button></a>
       <a href="#staff"><button class="btn-update">View Pending Staff</button></a>
       <a href="Rstaffs.php"><button class="btn-done">View Registered Staff</button></a>
+      <a href="export.php"><button class="btn-update">Download as CSV</button></a>
       </div>
    
       <div class="main-text">
