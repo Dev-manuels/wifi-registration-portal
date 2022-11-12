@@ -22,7 +22,6 @@
     <br><?php echo "password = $password"  ?></p>
     </div>
   </main>
-
-    <?php include 'scripts.php'; ?>
+  <?php include 'scripts.php'; ?>
 </body>
 </html>
