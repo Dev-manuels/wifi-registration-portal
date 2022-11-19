@@ -22,6 +22,7 @@
       <a href="#staff"><button class="btn-update">View Pending Staff</button></a>
       <a href="Rstaffs.php"><button class="btn-done">View Registered Staff</button></a>
       <a href="export.php"><button class="btn-update">Download as CSV</button></a>
+      <a href="batch.php"><button class="btn-delete">Batch delete</button></a>
       </div>
    
       <div class="main-text">
